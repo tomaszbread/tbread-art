@@ -9,7 +9,7 @@ const nextConfig = {
     return [
       {
         source: '/api/:path*',
-        destination: 'http://localhost:1337/api/:path*', // Przekierowanie do Strapi
+        destination: 'https://tbread-art.onrender.com/api/:path*',
       },
     ];
   },
