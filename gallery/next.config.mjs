@@ -5,14 +5,9 @@ const nextConfig = {
     loader: "default",
     domains: ["res.cloudinary.com"],
   },
-  async rewrites() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: 'https://tbread-art.onrender.com/api/:path*',
-      },
-    ];
-  },
+  serverRuntimeConfig: {
+    port: process.env.PORT || 3000,
+  }
 };
 
 export default nextConfig;
