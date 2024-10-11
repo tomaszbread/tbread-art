@@ -5,6 +5,14 @@ const nextConfig = {
     loader: "default",
     domains: ["res.cloudinary.com"],
   },
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: 'http://localhost:1337/api/:path*', // Przekierowanie do Strapi
+      },
+    ];
+  },
 };
 
 export default nextConfig;
