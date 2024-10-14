@@ -9,8 +9,8 @@
   "scripts": {
     "build": "npm run build --workspace cms && npm run build --workspace gallery",
     "start": "npm-run-all --parallel start:cms start:gallery",
-    "start:cms": "PORT=$PORT npm run start --workspace cms",
-    "start:gallery": "PORT=$PORT npm run start --workspace gallery"
+    "start:cms": "PORT=3000 npm run start --workspace cms",
+    "start:gallery": "PORT=3001 npm run start --workspace gallery"
   },
   "devDependencies": {
     "npm-run-all": "^4.1.5"
