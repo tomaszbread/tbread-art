@@ -4,7 +4,7 @@ services:
     runtime: node
     rootDir: cms
     buildCommand: npm install && npm run build
-    startCommand: npm run start
+    startCommand: npm run start:cms  
 
   - type: web
     name: gallery-frontend
