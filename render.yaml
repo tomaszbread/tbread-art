@@ -8,7 +8,14 @@ services:
 
   - type: web
     name: gallery-frontend
-    runtime: node
+    runtime: static
     rootDir: gallery
     buildCommand: npm install && npm run build
     startCommand: npm run start
+    staticPublishPath: ./gallery/build/
+    buildFilter:
+      paths:
+        - gallery/**/*.js
+        - gallery/**/*.css
+      ignoredPaths:
+        - gallery/**/*.test.js
