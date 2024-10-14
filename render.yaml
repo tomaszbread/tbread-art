@@ -1,12 +1,14 @@
 services:
   - type: web
-    name: tbread-art
-    env: node
-    plan: free
-    rootDirectory: gallery
+    name: cms-backend
+    runtime: node
+    rootDir: cms
     buildCommand: npm install && npm run build
-    startCommand: npm start
-    autoDeploy: true
-    buildFilters:
-      - /gallery/**
-      - /cms/**
+    startCommand: npm run start
+
+  - type: web
+    name: gallery-frontend
+    runtime: node
+    rootDir: gallery
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
