@@ -12,7 +12,7 @@ services:
     rootDir: gallery
     buildCommand: npm install && npm run build
     startCommand: npm run start
-    staticPublishPath: ./gallery/build/
+    staticPublishPath: ./.next
     buildFilter:
       paths:
         - gallery/**/*.js
